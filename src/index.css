@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand-50: #fdf8f0;
+  --color-sand-100: #f9eedd;
+  --color-sand-200: #f2dbb8;
+  --color-sand-300: #e9c48a;
+  --color-sand-400: #dfa85c;
+  --color-sand-500: #d8933e;
+  --color-sand-600: #ca7d33;
+  --color-sand-700: #a8622b;
+  --color-sand-800: #874f29;
+  --color-sand-900: #6e4225;
+  --color-ocean-50: #effcfc;
+  --color-ocean-100: #d7f6f7;
+  --color-ocean-200: #b4ecef;
+  --color-ocean-300: #80dde3;
+  --color-ocean-400: #45c5cf;
+  --color-ocean-500: #2aa9b5;
+  --color-ocean-600: #268998;
+  --color-ocean-700: #256f7c;
+  --color-ocean-800: #275b66;
+  --color-ocean-900: #244c57;
+  --color-jungle-50: #f0fdf0;
+  --color-jungle-100: #dbfcdb;
+  --color-jungle-200: #b9f7ba;
+  --color-jungle-300: #83ee87;
+  --color-jungle-400: #46dc4d;
+  --color-jungle-500: #1ec327;
+  --color-jungle-600: #12a11b;
+  --color-jungle-700: #127e19;
+  --color-jungle-800: #146319;
+  --color-jungle-900: #125217;
+  --color-lava-50: #fef3f2;
+  --color-lava-100: #fee4e2;
+  --color-lava-200: #fececa;
+  --color-lava-300: #fcada5;
+  --color-lava-400: #f87e72;
+  --color-lava-500: #ef5544;
+  --color-lava-600: #dc3826;
+  --color-lava-700: #b92c1c;
+  --color-lava-800: #99281b;
+  --color-lava-900: #7f271d;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-sand-50);
+  color: #1e293b;
+}
+
+::selection {
+  background: var(--color-ocean-200);
+}
