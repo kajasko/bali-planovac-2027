@@ -8,6 +8,7 @@ import {
   areaColors, areaLabels,
   type Lodging, type DayPlan
 } from './data'
+import { MapSection } from './MapSection'
 
 function cn(...classes: (string | false | undefined)[]) {
   return classes.filter(Boolean).join(' ')
@@ -29,6 +30,7 @@ function Badge({ children, className }: { children: React.ReactNode; className?:
 function Nav({ activeSection }: { activeSection: string }) {
   const links = [
     { id: 'overview', label: 'Přehled', icon: Sun },
+    { id: 'map', label: 'Mapa', icon: MapPin },
     { id: 'lodging', label: 'Ubytování', icon: TreePalm },
     { id: 'must-see', label: 'Must-see', icon: Eye },
     { id: 'must-eat', label: 'Must-eat', icon: Utensils },
@@ -586,7 +588,7 @@ export default function App() {
   }, 0)
 
   const handleScroll = () => {
-    const sections = ['overview', 'lodging', 'must-see', 'must-eat', 'culture', 'itinerary', 'logistics', 'avoid']
+    const sections = ['overview', 'map', 'lodging', 'must-see', 'must-eat', 'culture', 'itinerary', 'logistics', 'avoid']
     for (const id of sections) {
       const el = document.getElementById(id)
       if (el) {
@@ -606,6 +608,7 @@ export default function App() {
 
       <main className="max-w-6xl mx-auto px-4 py-8 space-y-16" onMouseMove={handleScroll}>
         <Overview totalUSD={totalUSD} />
+        <MapSection />
         <LodgingSection selections={selections} onSelect={handleSelect} />
         <MustSeeSection />
         <MustEatSection />
